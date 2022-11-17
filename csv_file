@@ -1,1 +1,74 @@
+############################################### task 1 (shoping_history / table creation output) ####################################################
+
+PRODUCT,QUANTITY,UNIT_PRICE
+"T SHIRT",48,65
+SHIRT,24,95
+JEANS,12,455
+"T SHIRT",9,75
+JACKET,3,550
+UNDERWEAR,24,255
+JEANS,24,580
+JACKET,12,265
+JEANS,36,780
+JEANS,24,580
+JACKET,12,265
+JEANS,36,780
+"T SHIRT",48,65
+SHIRT,24,95
+JEANS,12,455
+"T SHIRT",9,75
+JACKET,3,550
+UNDERWEAR,24,255
+JEANS,24,580
+JACKET,12,265
+JEANS,36,780
+
+############################################### task 1 (shoping_history / querry result) ####################################################
+product,total_price
+UNDERWEAR,12240
+"T SHIRT",7590
+SHIRT,4560
+JEANS,136920
+JACKET,12840
+
+################################################### task 2[given 1] (phones / table creation output)#####################################################
+NAME,PHONE_NUMBER
+Jack,1234
+Lena,3333
+Anna,7582
+Mark,9999
+
+################################################### task 2[given 1] (calls / table creation output)#####################################################
+ID,CALLER,CALLEE,DURATION
+2,7582,3333,3
+3,3333,1234,1
+7,9999,7582,1
+18,9999,3333,4
+21,3333,1234,1
+25,1234,7582,8
+
+############################################### task 2 [given 1](calls / phones / querry result) ####################################################
+
+Name
+Jack
+Anna
+
+################################################### task 2[given 2] (phones_2 / table creation output)#####################################################
+NAME,PHONE_NUMBER
+Addison,4315
+John,6356
+Kate,8003
+Ginny,9831
+
+################################################### task 2[given 2] (CALLS_2 / table creation output)#####################################################
+ID,CALLER,CALLEE,DURATION
+65,8003,9831,7
+100,9831,8003,3
+145,4315,9831,18
+
+############################################### task 2 [given 2](calls_2 / phones_2 / querry result) ####################################################
+Name
+Kate
+Ginny
+Addison
 
