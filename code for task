@@ -84,4 +84,45 @@ group by 1
 having sum(cte.dur) >= 10;
 
 
-given --2----
+##################################################### TASK 2 given --2---- ##################################################################################
+
+
+CREATE TABLE PHONES_2 (
+    NAME VARCHAR(20) NOT NULL,
+    PHONE_NUMBER INTEGER NOT NULL UNIQUE
+);
+
+INSERT INTO PHONES_2(NAME,PHONE_NUMBER) VALUES
+('John',6356),
+('Addison',4315),
+('Kate',8003),
+('Ginny',9831);
+
+select * from phones_2;
+
+CREATE TABLE CALLS_2 (
+    ID INTEGER NOT NULL UNIQUE,
+    CALLER INTEGER NOT NULL,
+    CALLEE INTEGER NOT NULL,
+    DURATION INTEGER NOT NULL
+)
+
+INSERT INTO CALLS_2 (ID,CALLER,CALLEE,DURATION) VALUES
+(65,8003,9831,7),
+(100,9831,8003,3),
+(145,4315,9831,18);
+
+select * from calls_2;
+
+with
+cte_1 as (
+		select caller, sum(duration) as dur from calls_2 group by 1
+        union all 
+        select callee, sum(duration) from calls_2 group by 1
+)
+select phones_2.name as Name
+from cte_1
+	inner join phones_2 on phones_2.phone_number = cte_1.caller
+group by 1
+having sum(cte_1.dur) >= 2;
+
